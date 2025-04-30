@@ -4,7 +4,7 @@ import 'package:recommendation_app/model/movie_model.dart';
 class MovieDetailsScreen extends StatelessWidget {
   final Movie movie;
 
-  const MovieDetailsScreen({Key? key, required this.movie}) : super(key: key);
+  const MovieDetailsScreen({super.key, required this.movie});
 
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,8 @@ import 'package:recommendation_app/screens/music_tile.dart';
 import 'package:recommendation_app/services/music_service.dart';
 
 class SearchScreen extends StatefulWidget {
+  const SearchScreen({super.key});
+
   @override
   _SearchScreenState createState() => _SearchScreenState();
 }

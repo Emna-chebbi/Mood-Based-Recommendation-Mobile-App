@@ -38,7 +38,7 @@ class MovieGenreSelectionScreen extends StatelessWidget {
     },
   ];
 
-  const MovieGenreSelectionScreen({Key? key, required this.mood}) : super(key: key);
+  const MovieGenreSelectionScreen({super.key, required this.mood});
 
   @override
   Widget build(BuildContext context) {
@@ -154,7 +154,7 @@ class GenreCard extends StatelessWidget {
   final Color color;
   final VoidCallback onTap;
 
-  const GenreCard({
+  const GenreCard({super.key, 
     required this.genre,
     required this.description,
     required this.color,

@@ -5,7 +5,7 @@ import 'last_name_screen.dart';
 class FirstNameScreen extends StatefulWidget {
   final RegistrationContext contextData;
 
-  const FirstNameScreen({Key? key, required this.contextData}) : super(key: key);
+  const FirstNameScreen({super.key, required this.contextData});
 
   @override
   _FirstNameScreenState createState() => _FirstNameScreenState();

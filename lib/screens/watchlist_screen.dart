@@ -4,6 +4,8 @@ import 'package:recommendation_app/database/database_helper.dart';
 import 'package:recommendation_app/screens/movie_details_screen.dart';
 
 class WatchlistScreen extends StatefulWidget {
+  const WatchlistScreen({super.key});
+
   @override
   _WatchlistScreenState createState() => _WatchlistScreenState();
 }

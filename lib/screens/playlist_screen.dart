@@ -5,7 +5,7 @@ import 'package:recommendation_app/services/playlist_service.dart';
 class PlaylistScreen extends StatefulWidget {
   final int userId;
 
-  const PlaylistScreen({required this.userId, Key? key}) : super(key: key);
+  const PlaylistScreen({required this.userId, super.key});
 
   @override
   _PlaylistScreenState createState() => _PlaylistScreenState();
@@ -200,9 +200,9 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
         backgroundColor: Color(0xFF328E6E),
         onPressed: () => _showCreatePlaylistDialog(context),
+        child: Icon(Icons.add),
       ),
     );
   }
@@ -312,8 +312,8 @@ class PlaylistDetailScreen extends StatefulWidget {
   const PlaylistDetailScreen({
     required this.playlistId,
     required this.playlistName,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _PlaylistDetailScreenState createState() => _PlaylistDetailScreenState();

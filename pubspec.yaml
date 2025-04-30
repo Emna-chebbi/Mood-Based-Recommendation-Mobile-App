@@ -62,6 +62,7 @@ flutter:
     - assets/audio/happy_song.mp3
     - assets/audio/energy_song.mp3
     - assets/audio/calm_song.mp3
+    - assets/images/premium.png
  
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -176,7 +176,7 @@ class _MoodSelectionScreenState extends State<MoodSelectionScreen> {
                 );
               },
             ))
-        ?.toList() ?? [],
+        .toList() ?? [],
   );
 }
 

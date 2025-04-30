@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recommendation_app/screens/mood_selection_screen.dart';
 import 'package:recommendation_app/screens/movie_genre_selection_screen.dart';
-import 'package:recommendation_app/screens/music_recommendations.dart';
 
 class MediaSelectionScreen extends StatelessWidget {
   final String mood;

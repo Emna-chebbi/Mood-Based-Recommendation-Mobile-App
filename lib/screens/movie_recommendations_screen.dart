@@ -11,10 +11,10 @@ class MovieRecommendationsScreen extends StatefulWidget {
   final String genre;
 
   const MovieRecommendationsScreen({
-    Key? key,
+    super.key,
     required this.mood,
     required this.genre,
-  }) : super(key: key);
+  });
 
   @override
   _MovieRecommendationsScreenState createState() => _MovieRecommendationsScreenState();
@@ -303,7 +303,7 @@ class _MovieRecommendationsScreenState extends State<MovieRecommendationsScreen>
 class NetflixMovieCard extends StatefulWidget {
   final Movie movie;
 
-  const NetflixMovieCard({Key? key, required this.movie}) : super(key: key);
+  const NetflixMovieCard({super.key, required this.movie});
 
   @override
   _NetflixMovieCardState createState() => _NetflixMovieCardState();

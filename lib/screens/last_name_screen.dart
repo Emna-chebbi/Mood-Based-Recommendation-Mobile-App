@@ -5,7 +5,7 @@ import 'gender_screen.dart';
 class LastNameScreen extends StatefulWidget {
   final RegistrationContext contextData;
 
-  const LastNameScreen({Key? key, required this.contextData}) : super(key: key);
+  const LastNameScreen({super.key, required this.contextData});
 
   @override
   _LastNameScreenState createState() => _LastNameScreenState();

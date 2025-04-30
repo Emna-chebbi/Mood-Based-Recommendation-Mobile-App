@@ -6,7 +6,7 @@ import 'package:recommendation_app/services/music_service.dart';
 class MusicTile extends StatefulWidget {
   final Music music;
 
-  const MusicTile({required this.music});
+  const MusicTile({super.key, required this.music});
 
   @override
   _MusicTileState createState() => _MusicTileState();
@@ -72,7 +72,7 @@ class _MusicTileState extends State<MusicTile> {
               color: _isFavorite ? Colors.red : Colors.grey,
             ),
             onPressed: () async {
-              await _musicService.toggleFavorite(widget.music.id!, !_isFavorite);
+              await _musicService.toggleFavorite(widget.music.id, !_isFavorite);
               setState(() => _isFavorite = !_isFavorite);
             },
           ),

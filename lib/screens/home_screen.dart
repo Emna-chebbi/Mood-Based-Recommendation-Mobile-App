@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:recommendation_app/model/registration_context.dart';
 import 'first_name_screen.dart';
 import 'login_screen.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -91,8 +92,27 @@ class HomeScreen extends StatelessWidget {
 
                   SizedBox(height: 40),
 
-                  // Premium features with gold icons
-                  _buildFeatureList(),
+                  // Premium features with gold icons in left-aligned container
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        FeatureRow(icon: Icons.personal_video, text: "Personalized recommendations"),
+                        SizedBox(height: 12),
+                        FeatureRow(icon: Icons.verified_user, text: "Exclusive content"),
+                        SizedBox(height: 12),
+                        FeatureRow(icon: Icons.no_accounts, text: "Ad-free experience"),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: 40),
                   
                   // Register button
                   _buildRegisterButton(context),
@@ -132,9 +152,6 @@ class HomeScreen extends StatelessWidget {
           child: Image.asset(
             'assets/images/premium.png',
             fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) {
-              return Icon(Icons.star, color: Color(0xFFD4AF37), size: 70);
-            },
           ),
         ),
       );
@@ -149,16 +166,6 @@ class HomeScreen extends StatelessWidget {
         child: Icon(Icons.star, color: Color(0xFFD4AF37), size: 40),
       );
     }
-  }
-
-  Widget _buildFeatureList() {
-    return Column(
-      children: [
-        FeatureRow(icon: Icons.personal_video, text: "Personalized recommendations"),
-        FeatureRow(icon: Icons.verified_user, text: "Exclusive content"),
-        FeatureRow(icon: Icons.no_accounts, text: "Ad-free experience"),
-      ],
-    );
   }
 
   Widget _buildRegisterButton(BuildContext context) {
@@ -265,30 +272,27 @@ class FeatureRow extends StatelessWidget {
   final IconData icon;
   final String text;
 
-  const FeatureRow({Key? key, required this.icon, required this.text}) : super(key: key);
+  const FeatureRow({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            icon,
-            color: Color(0xFFD4AF37),
-            size: 20,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start, // Changed to left-align
+      children: [
+        Icon(
+          icon,
+          color: Color(0xFFD4AF37),
+          size: 20,
+        ),
+        SizedBox(width: 10),
+        Text(
+          text,
+          style: TextStyle(
+            color: Color(0xFF330000),
+            fontSize: 14,
           ),
-          SizedBox(width: 10),
-          Text(
-            text,
-            style: TextStyle(
-              color: Color(0xFF330000),
-              fontSize: 14,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

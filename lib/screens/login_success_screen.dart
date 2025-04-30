@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recommendation_app/screens/media_selection_screen.dart';
-import 'package:recommendation_app/screens/mood_selection_screen.dart';
 
 class LoginSuccessScreen extends StatelessWidget {
   final String userEmail;
